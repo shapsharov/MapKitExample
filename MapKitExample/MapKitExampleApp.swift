@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct MapKitExampleApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
-    }
+	let placesViewModel = PlacesViewModel()
+
+	var body: some Scene {
+		WindowGroup {
+			PlacesView(places: placesViewModel)
+		}
+	}
 }
